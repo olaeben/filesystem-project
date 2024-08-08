@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fileSystem module &mdash; Hitachi_Vantara_Project 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Hitachi_Vantara_Project" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Hitachi_Vantara_Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Hitachi_Vantara_Project</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">fileSystem module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Hitachi_Vantara_Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Hitachi_Vantara_Project</a></li>
+      <li class="breadcrumb-item active">fileSystem module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fileSystem.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-fileSystem">
+<span id="filesystem-module"></span><h1>fileSystem module<a class="headerlink" href="#module-fileSystem" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="fileSystem.FileGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fileSystem.</span></span><span class="sig-name descname"><span class="pre">FileGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_size_kb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_size_kb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileGenerator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generates random files with specified size and content.</p>
+<p>The <cite>FileGenerator</cite> class provides functionality to create files filled with
+random content. The size of the files can be customized by specifying minimum
+and maximum size limits.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>min_size_kb (int): The minimum size of the generated files in kilobytes (default is 4 KB).
+max_size_kb (int): The maximum size of the generated files in kilobytes (default is 1024 KB).</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fileSystem.FileGenerator.create_file">
+<span class="sig-name descname"><span class="pre">create_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileGenerator.create_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileGenerator.create_file" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a file with random content at the specified path.</p>
+<p>This method generates a file at the given file path with a random
+content size between the specified minimum and maximum size limits.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>file_path (str or Path): The path where the file will be created.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fileSystem.FileGenerator.generate_random_content">
+<span class="sig-name descname"><span class="pre">generate_random_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size_kb</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileGenerator.generate_random_content"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileGenerator.generate_random_content" title="Permalink to this definition"></a></dt>
+<dd><p>Generates random text content for a file.</p>
+<p>This method generates a string of random alphanumeric characters
+to fill a file with a specified size.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>size_kb (int): The size of the content to generate in kilobytes.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: A string containing random alphanumeric content of the specified size.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fileSystem.FileSystemLoader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fileSystem.</span></span><span class="sig-name descname"><span class="pre">FileSystemLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileSystemLoader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileSystemLoader" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle the creation of a simulated file system with a specified number of files
+and directories. The files are generated with random sizes and contents.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>root_path (Path): The root directory where the file system will be created.
+num_files (int): The total number of files to be created across all directories.
+min_size (int): The minimum size (in bytes) for the generated files.
+max_size (int): The maximum size (in bytes) for the generated files.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fileSystem.FileSystemLoader.create_directories">
+<span class="sig-name descname"><span class="pre">create_directories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileSystemLoader.create_directories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileSystemLoader.create_directories" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively creates a directory tree with a specific structure.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (Path): The current path where directories are being created.
+level (int): The current depth level of the directory tree.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fileSystem.FileSystemLoader.create_files_in_directory">
+<span class="sig-name descname"><span class="pre">create_files_in_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileSystemLoader.create_files_in_directory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileSystemLoader.create_files_in_directory" title="Permalink to this definition"></a></dt>
+<dd><p>Creates files with random content and sizes within a specified directory.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>dir_path (Path): The path where files should be created.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fileSystem.FileSystemLoader.load_filesystem">
+<span class="sig-name descname"><span class="pre">load_filesystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#FileSystemLoader.load_filesystem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.FileSystemLoader.load_filesystem" title="Permalink to this definition"></a></dt>
+<dd><p>Loads the entire file system by creating the required directories and files
+based on the initialized parameters.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fileSystem.Logger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fileSystem.</span></span><span class="sig-name descname"><span class="pre">Logger</span></span><a class="reference internal" href="_modules/fileSystem.html#Logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.Logger" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles logging configuration for the script.</p>
+<p>The logger is set up to output logs to both a file (<cite>filesystem_loader.log</cite>)
+and the console. The logging level is set to <cite>INFO</cite>, which captures all
+informational messages and above (including warnings, errors, and critical messages).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fileSystem.Logger.configure_logging">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configure_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fileSystem.html#Logger.configure_logging"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fileSystem.Logger.configure_logging" title="Permalink to this definition"></a></dt>
+<dd><p>Configures the logging settings for the script.</p>
+<p>Sets up logging to output messages to a log file (<cite>filesystem_loader.log</cite>)
+and the console with a specific format that includes the timestamp, log level,
+and the log message.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Hitachi_Vantara_Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Olawale Ibitoye.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
